@@ -22,6 +22,10 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
+        for sprite in asteroids:
+            if ship.collides_with(sprite):
+                print("Game over!")
+                return
         for sprite in updatable:
             sprite.update(dt)
         screen.fill((0, 0, 0))
