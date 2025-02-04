@@ -31,7 +31,7 @@ def main():
                 return
             for shot in bullets:
                 if sprite.collides_with(shot):
-                    sprite.kill()
+                    sprite.split()
                     shot.kill()
         for sprite in updatable:
             sprite.update(dt)
